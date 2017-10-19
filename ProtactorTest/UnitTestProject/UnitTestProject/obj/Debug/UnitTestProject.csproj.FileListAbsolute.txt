@@ -1,0 +1,17 @@
+E:\ЛПР\CSharp_tests\UITests\ProtactorTest\UnitTestProject\UnitTestProject\bin\Debug\UnitTestProject.dll
+E:\ЛПР\CSharp_tests\UITests\ProtactorTest\UnitTestProject\UnitTestProject\bin\Debug\UnitTestProject.pdb
+E:\ЛПР\CSharp_tests\UITests\ProtactorTest\UnitTestProject\UnitTestProject\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+E:\ЛПР\CSharp_tests\UITests\ProtactorTest\UnitTestProject\UnitTestProject\bin\Debug\Newtonsoft.Json.dll
+E:\ЛПР\CSharp_tests\UITests\ProtactorTest\UnitTestProject\UnitTestProject\bin\Debug\nunit.framework.dll
+E:\ЛПР\CSharp_tests\UITests\ProtactorTest\UnitTestProject\UnitTestProject\bin\Debug\Protractor.dll
+E:\ЛПР\CSharp_tests\UITests\ProtactorTest\UnitTestProject\UnitTestProject\bin\Debug\Protractor.TestAdapter.dll
+E:\ЛПР\CSharp_tests\UITests\ProtactorTest\UnitTestProject\UnitTestProject\bin\Debug\WebDriver.dll
+E:\ЛПР\CSharp_tests\UITests\ProtactorTest\UnitTestProject\UnitTestProject\bin\Debug\WebDriver.Support.dll
+E:\ЛПР\CSharp_tests\UITests\ProtactorTest\UnitTestProject\UnitTestProject\bin\Debug\nunit.framework.xml
+E:\ЛПР\CSharp_tests\UITests\ProtactorTest\UnitTestProject\UnitTestProject\bin\Debug\Protractor.pdb
+E:\ЛПР\CSharp_tests\UITests\ProtactorTest\UnitTestProject\UnitTestProject\bin\Debug\Protractor.xml
+E:\ЛПР\CSharp_tests\UITests\ProtactorTest\UnitTestProject\UnitTestProject\bin\Debug\WebDriver.xml
+E:\ЛПР\CSharp_tests\UITests\ProtactorTest\UnitTestProject\UnitTestProject\bin\Debug\WebDriver.Support.xml
+E:\ЛПР\CSharp_tests\UITests\ProtactorTest\UnitTestProject\UnitTestProject\obj\Debug\UnitTestProject.dll
+E:\ЛПР\CSharp_tests\UITests\ProtactorTest\UnitTestProject\UnitTestProject\obj\Debug\UnitTestProject.pdb
+E:\ЛПР\CSharp_tests\UITests\ProtactorTest\UnitTestProject\UnitTestProject\obj\Debug\UnitTestProject.csprojResolveAssemblyReference.cache
