@@ -72,16 +72,25 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
       </ItemGroup>
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Factory\DriverFactory.cs" />
+    <Compile Include="Helpers\AccountPageHelper.cs" />
+    <Compile Include="Helpers\CommonHelper.cs" />
     <Compile Include="Helpers\CustomerPageHelper.cs" />
+    <Compile Include="Helpers\MainPageHelper.cs" />
+    <Compile Include="Page\AccountPage.cs" />
+    <Compile Include="Page\BasePage.cs" />
     <Compile Include="Page\CustomerPage.cs" />
     <Compile Include="Page\MainPage.cs" />
     <Compile Include="Tests\SelectValidCustomer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\BaseUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -89,6 +98,7 @@
   <ItemGroup>
     <Content Include="conf.js" />
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

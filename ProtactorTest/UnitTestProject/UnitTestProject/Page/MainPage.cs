@@ -4,7 +4,7 @@ using OpenQA.Selenium;
 
 namespace UnitTestProject.Page
 {
-    class MainPage
+    class MainPage : BasePage
     {
         [FindsBy(How = How.XPath, Using = "//button[@ng-click='customer()']")]
         public IWebElement button { get; set; }
@@ -12,10 +12,6 @@ namespace UnitTestProject.Page
         [FindsBy(How = How.XPath, Using = "//select[@ng-model='custId']")]
         public IWebElement dropDown { get; set; }
 
-        public MainPage(NgWebDriver ngDr)
-        {
-            PageFactory.InitElements(ngDr, this);
-        }
 
         public void clickCustomersButton()
         {
