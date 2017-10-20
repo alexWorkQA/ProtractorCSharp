@@ -1,1 +1,0 @@
-E:\ЛПР\CSharp_tests\UITests\WpfApplication\WpfApplication\bin\Debug\WpfApplication.exe.config
