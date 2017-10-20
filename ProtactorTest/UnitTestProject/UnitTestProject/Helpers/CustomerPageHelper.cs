@@ -1,16 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Protractor;
+using System.Collections.ObjectModel;
 
 namespace UnitTestProject.Helpers
 {
     class CustomerPageHelper : Page.CustomerPage
     {
-        public CustomerPageHelper(NgWebDriver ng) : base(ng)
+        public CustomerPageHelper() : base()
         {
+            
         }
+
+        public string getUrlForAssert()
+        {
+            return ng_driver.Url;
+        }
+
+        public void selectAlbusCustomer()
+        {
+            openCustomerList();
+            ReadOnlyCollection<NgWebElement> customers = ng_driver.FindElements(NgBy.Repeater("cust in Customers"));
+            var customer = customers.ElementAt(3);
+            customer.Click();
+            clickLoginButton();
+        }
+
+
     }
 }

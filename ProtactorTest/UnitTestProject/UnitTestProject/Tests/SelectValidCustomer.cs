@@ -1,52 +1,34 @@
 ﻿using NUnit.Framework;
-using Protractor;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-
-
-
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using UnitTestProject.Page;
-using System;
 using System.Threading;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text.RegularExpressions;
-using System.Collections.Generic;
+using UnitTestProject.Helpers;
+using UnitTestProject.Tests;
 
 namespace UnitTestProject
 {
     [TestClass]
-    public class UnitTest
+    class UnitTest
    {
-        private static IWebDriver driver;
-        private static NgWebDriver ngDr;
-        private MainPage mainPage;
-        private CustomerPage customerPage;
+       CommonHelper commonHelper = new CommonHelper();
+       MainPageHelper mainPageHelper = new MainPageHelper();
+       CustomerPageHelper customerPageHelper = new CustomerPageHelper();
+        AccountPageHelper accountHelper = new AccountPageHelper();
 
         [SetUp]
         public void SetupWebDriver()
-
         {
-            driver = new ChromeDriver();
-            ngDr = new NgWebDriver(driver);
-            driver.Navigate().GoToUrl("http://www.way2automation.com/angularjs-protractor/banking/#/login");
-            mainPage = new MainPage(ngDr);
-            customerPage = new CustomerPage(ngDr);
+            commonHelper.openWebBrowser();
         }
 
         [Test]
-        public void TestMethod()
+        public void AlbusWasAbleToOpenAccountPage()
         {
-            mainPage.clickCustomersButton();
-            string assertUrl = customerPage.getUrl(ngDr);
+            mainPageHelper.openCustomerPage();
+            string assertUrl = customerPageHelper.getUrlForAssert();
             NUnit.Framework.Assert.AreEqual("http://www.way2automation.com/angularjs-protractor/banking/#/customer", assertUrl);
-            customerPage.openCustomerList();
-            ReadOnlyCollection <NgWebElement> customers = ngDr.FindElements(NgBy.Repeater("cust in Customers"));
-            var fisrtCustomer = customers.ElementAt(3);
-            fisrtCustomer.Click();
-            //customer.Where(customers => Regex.IsMatch(customers.Text, "Harry Potter"));
-            customerPage.clickLoginButton();
+            customerPageHelper.selectAlbusCustomer();
+            string assertAccountName = accountHelper.getAccountNameForAssert();
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual("Albus Dumbledore", assertAccountName);
             Thread.Sleep(2000);
         }
 
@@ -54,7 +36,7 @@ namespace UnitTestProject
         [TearDown]
         public void CloseWebDriver()
         {
-            driver.Close();
+            commonHelper.closeWebBrowser();
         }
     }
 }
