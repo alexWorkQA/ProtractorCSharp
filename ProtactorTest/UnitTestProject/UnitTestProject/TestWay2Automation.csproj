@@ -79,6 +79,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Factory\ApplicationFactory.cs" />
     <Compile Include="Factory\DriverFactory.cs" />
     <Compile Include="Helpers\AccountPageHelper.cs" />
     <Compile Include="Helpers\CommonHelper.cs" />
@@ -90,7 +91,6 @@
     <Compile Include="Page\MainPage.cs" />
     <Compile Include="Tests\SelectValidCustomer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests\BaseUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
