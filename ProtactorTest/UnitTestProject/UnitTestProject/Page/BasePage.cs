@@ -4,10 +4,7 @@ using UnitTestProject.Factory;
 
 namespace UnitTestProject.Page
 {
-
-
-
-   class BasePage
+    class BasePage
     {
       public static NgWebDriver ng_driver = DriverFactory.getNgDriver("chrome");
 

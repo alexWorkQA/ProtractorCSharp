@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenQA.Selenium;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,21 @@ namespace UnitTestProject.Helpers
         public string getAccountNameForAssert()
         {
             return getAccountName();
+        }
+
+        public int getAccountBalance()
+        {
+            IReadOnlyCollection<IWebElement> listDepoInfo = accountInfo();
+            string balance = listDepoInfo.ElementAt(1).Text;
+            int i = Int32.Parse(balance);
+            return i;
+        }
+
+        public void addToDeposit(string amount)
+        {
+            clickDepositButton();
+            enterDepositAmount(amount);
+            clickSubmitButton();
         }
 
     }

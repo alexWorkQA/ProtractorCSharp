@@ -1,11 +1,12 @@
 ﻿using NUnit.Framework;
+using System.Threading;
 using UnitTestProject.Factory;
 
-namespace UnitTestProject
+namespace UnitTestProject.Tests
 {
     [TestFixture]
-    class UnitTest
-   {
+    class UserAddNewDeposit
+    {
         ApplicationFactory app;
 
         [SetUp]
@@ -16,11 +17,13 @@ namespace UnitTestProject
         }
 
         [Test]
-        public void AlbusWasAbleToOpenAccountPage()
+        public void AlbusWasAbleToAddNewDeposit()
         {
             app.mainPageHelper.openCustomerPage();
             app.customerPageHelper.selectAlbusCustomer();
-            Assert.AreEqual("Albus Dumbledore", app.accountHelper.getAccountNameForAssert());
+            Assert.AreEqual(0, app.accountHelper.getAccountBalance());
+            app.accountHelper.addToDeposit("50");
+            Assert.AreEqual(50, app.accountHelper.getAccountBalance());
         }
 
         [TearDown]
@@ -28,5 +31,6 @@ namespace UnitTestProject
         {
             app.commonHelper.closeWebBrowser();
         }
+
     }
 }

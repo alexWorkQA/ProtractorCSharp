@@ -91,6 +91,7 @@
     <Compile Include="Page\MainPage.cs" />
     <Compile Include="Tests\SelectValidCustomer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\UserAddNewDeposit.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
