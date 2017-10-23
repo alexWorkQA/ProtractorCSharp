@@ -1,6 +1,8 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
+using Protractor;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace UnitTestProject.Page
 {
@@ -29,9 +31,9 @@ namespace UnitTestProject.Page
             depositButton.Click();
         }
 
-        public IReadOnlyCollection<IWebElement> accountInfo()
+        public ReadOnlyCollection<NgWebElement> accountInfo()
         {
-            IReadOnlyCollection<IWebElement> listDepositInfo = ng_driver.FindElements(By.XPath("//strong[@class='ng-binding']"));
+            ReadOnlyCollection<NgWebElement> listDepositInfo = ng_driver.FindElements(By.XPath("//strong[@class='ng-binding']"));
             return listDepositInfo;
         }
 

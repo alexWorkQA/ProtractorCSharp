@@ -1,6 +1,6 @@
-﻿using OpenQA.Selenium;
+﻿using Protractor;
 using System;
-using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 
 
@@ -15,7 +15,7 @@ namespace UnitTestProject.Helpers
 
         public int getAccountBalance()
         {
-            IReadOnlyCollection<IWebElement> listDepoInfo = accountInfo();
+            ReadOnlyCollection<NgWebElement> listDepoInfo = accountInfo();
             string balance = listDepoInfo.ElementAt(1).Text;
             return Int32.Parse(balance);
         }

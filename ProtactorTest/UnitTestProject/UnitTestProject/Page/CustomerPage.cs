@@ -1,6 +1,7 @@
 ﻿using Protractor;
 using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium;
+using System.Collections.ObjectModel;
 
 namespace UnitTestProject.Page
 {
@@ -22,6 +23,11 @@ namespace UnitTestProject.Page
         public void clickLoginButton()
         {
             loginButton.Click();
+        }
+
+        public ReadOnlyCollection<NgWebElement> getCustomerList()
+        {
+            return ng_driver.FindElements(NgBy.Repeater("cust in Customers"));
         }
     }
 }

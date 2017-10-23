@@ -5,10 +5,17 @@ namespace UnitTestProject.Factory
 {
     class DriverFactory
     {
+       static NgWebDriver ng_driver;
         public static NgWebDriver getNgDriver(string TypeOfDriver)
         {
-            NgWebDriver ng_driver = new NgWebDriver(new ChromeDriver());
-            return ng_driver;
+            if (ng_driver != null)
+            {
+                return ng_driver;
+            }
+            else
+            {
+                return ng_driver = new NgWebDriver(new ChromeDriver());
+            }
         }
 
     }

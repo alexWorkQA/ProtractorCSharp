@@ -13,3 +13,4 @@ E:\ЛПР\CSharp_tests\UITests\ProtactorTest\UnitTestProject\UnitTestProject\bin
 E:\ЛПР\CSharp_tests\UITests\ProtactorTest\UnitTestProject\UnitTestProject\bin\Debug\WebDriver.Support.xml
 E:\ЛПР\CSharp_tests\UITests\ProtactorTest\UnitTestProject\UnitTestProject\obj\Debug\UnitTestProject.dll
 E:\ЛПР\CSharp_tests\UITests\ProtactorTest\UnitTestProject\UnitTestProject\obj\Debug\UnitTestProject.pdb
+E:\ЛПР\CSharp_tests\UITests\ProtactorTest\UnitTestProject\UnitTestProject\obj\Debug\TestWay2Automation.csprojResolveAssemblyReference.cache

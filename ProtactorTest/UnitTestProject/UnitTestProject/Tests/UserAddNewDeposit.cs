@@ -4,6 +4,7 @@ using UnitTestProject.Factory;
 
 namespace UnitTestProject.Tests
 {
+
     [TestFixture]
     class UserAddNewDeposit
     {
@@ -16,7 +17,7 @@ namespace UnitTestProject.Tests
             app.commonHelper.openWebBrowser();
         }
 
-        [Test]
+        [Test, Author("QA tester"), Description("User Albus was able to add new deposite")]
         public void AlbusWasAbleToAddNewDeposit()
         {
             app.mainPageHelper.openCustomerPage();
@@ -29,7 +30,7 @@ namespace UnitTestProject.Tests
         [TearDown]
         public void CloseWebDriver()
         {
-            app.commonHelper.closeWebBrowser();
+           app.commonHelper.closeWebBrowser();
         }
 
     }

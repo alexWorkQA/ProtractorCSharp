@@ -20,7 +20,7 @@ namespace UnitTestProject.Helpers
         public void selectAlbusCustomer()
         {
             openCustomerList();
-            ReadOnlyCollection<NgWebElement> customers = ng_driver.FindElements(NgBy.Repeater("cust in Customers"));
+            ReadOnlyCollection<NgWebElement> customers = getCustomerList();
             var customer = customers.ElementAt(3);
             customer.Click();
             clickLoginButton();
