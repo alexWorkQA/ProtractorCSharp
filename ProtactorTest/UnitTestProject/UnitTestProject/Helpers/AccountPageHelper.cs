@@ -2,8 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace UnitTestProject.Helpers
 {
@@ -18,8 +17,7 @@ namespace UnitTestProject.Helpers
         {
             IReadOnlyCollection<IWebElement> listDepoInfo = accountInfo();
             string balance = listDepoInfo.ElementAt(1).Text;
-            int i = Int32.Parse(balance);
-            return i;
+            return Int32.Parse(balance);
         }
 
         public void addToDeposit(string amount)
